@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Justin Jet Zorbas</title>
+  <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Habibi&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- Navbar -->
+ <header class="navbar">
+  <div class="left-group">
+    <div class="logo"><a href="index.html">JUSTIN JET ZORBAS</a></div>
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://rpgaudiovault.com/" target="_blank" class="shop-btn">Shop</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <h1>Get in Touch</h1>
+      <p>For collaborations or just to say hello, feel free to reach out below.</p>
+
+      <div class="contact-box">
+        <form action="https://formspree.io/f/myznbvqr" method="POST">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="_replyto" placeholder="Your email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+          </div>
+
+          <button type="submit" class="btn-contact">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+    <footer>
+    <nav class="footer-nav">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="https://rpgaudiovault.com/" target="_blank">Shop</a>
+    </nav>
+
+      <hr class="footer-divider">
+
+
+      <div class="social-grid">
+     <a href="https://open.spotify.com/artist/10G9N5ABjyamTFBEAsquNs?si=3JpdAnOWSmanwhaV7ZREWQ" target="_blank"> <img src="images/spotify.png" alt="Unity"></a>
+     <a href="https://www.youtube.com/@JustinJetZorbas" target="_blank"> <img src="images/youtube.png" alt="ArtList"></a>
+    <a href="https://www.instagram.com/justinjetzorbas?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">  <img src="images/instagram.png" alt="Soundly"></a>
+       </div>
+
+  <p>© 2025 | Privacy — Terms | Site by <a href="https://luluxu.net" target="_blank">Lulu Xu</a></p>
+  </footer>
+
+
+  <!-- Custom Cursor -->
+<div class="custom-cursor"></div>
+
+<script>
+
+// === Custom Glowing Dot Cursor ===
+  const cursor = document.querySelector('.custom-cursor');
+
+  document.addEventListener('mousemove', (e) => {
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top = e.clientY + 'px';
+  });
+
+  document.querySelectorAll('a, button, .clickable').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('custom-hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('custom-hover'));
+  });
+
+// Cursor enlarge slightly on hover over clickable items
+const links = document.querySelectorAll("a, button");
+
+links.forEach(link => {
+  link.addEventListener("mouseenter", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(2)";
+    cursor.style.backgroundColor = "#ffe07d";
+  });
+  link.addEventListener("mouseleave", () => {
+    cursor.style.transform = "translate(-50%, -50%) scale(1)";
+    cursor.style.backgroundColor = "#fff8cc";
+  });
+});
+
+
+</script>
+
+
+</body>
+
+
+</html>

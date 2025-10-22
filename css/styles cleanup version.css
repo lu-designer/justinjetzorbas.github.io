@@ -1,0 +1,287 @@
+/* =========================================================
+   PATCH: Restore footer & about-page visuals (apply last)
+   Paste this at the END of styles.css
+   ========================================================= */
+
+/* ---------- Ensure global site colours are as intended ---------- */
+body {
+  background: #000 !important;
+  color: #D8DDD7 !important;
+}
+
+/* ---------- Footer (restore original look) ---------- */
+footer {
+  background: #000 !important;
+  color: #777 !important;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+.footer-nav {
+  margin-bottom: 1rem;
+}
+
+.footer-nav a {
+  margin: 0 1rem;
+  color: #D8DDD7 !important;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+  opacity: 0.8;
+}
+
+.footer-divider {
+  border: none;
+  border-top: 1px solid #555 !important;
+  margin: 2rem auto 2rem;
+  max-width: 80%;
+}
+
+/* social icons */
+.social-grid {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 2rem 0;
+}
+
+.social-grid img {
+  height: 40px !important;
+  opacity: 0.8;
+  margin: 0 1rem;
+  display: inline-block;
+}
+
+/* ---------- About page restore: intro layout ---------- */
+.about-intro {
+  padding: 8rem 4rem !important;
+  background: #000 !important;
+  color: #D8DDD7 !important;
+  box-sizing: border-box;
+}
+
+.about-intro .container {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 5rem !important;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.about-intro .intro-text {
+  flex: 1.2;
+  text-align: left;
+}
+
+.about-intro .portrait {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-intro .portrait img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- About story / collaborators ---------- */
+.about-story {
+  padding: 6rem 2rem !important;
+  background: #000 !important;
+}
+
+.about-story .container {
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+}
+
+.about-story.alt .container {
+  flex-direction: row-reverse;
+}
+
+.about-story .story-text {
+  flex: 1;
+}
+
+.about-story .story-image {
+  flex: 1;
+}
+
+.about-story .story-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.45);
+  padding-bottom: 2rem;
+}
+
+/* Quote styling (restore decorative quotes) */
+.about-quote {
+  text-align: center;
+  padding: 6rem 2rem 8rem;
+  background: #000 !important;
+}
+
+.about-quote blockquote {
+  font-family: 'Grenze Gotisch', "Sora", serif;
+  font-size: 2rem;
+  color: #D8DDD7;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-quote blockquote::before,
+.about-quote blockquote::after {
+  content: "“";
+  font-family: "Grenze Gotisch", serif;
+  position: absolute;
+  font-size: 5rem;
+  color: rgba(255,255,255,0.4);
+  pointer-events: none;
+}
+
+.about-quote blockquote::before {
+  top: -1rem;
+  left: -2rem;
+}
+
+.about-quote blockquote::after {
+  content: "”";
+  bottom: -2rem;
+  right: -1rem;
+}
+
+/* ---------- CTA / Logos ---------- */
+.logos {
+  text-align: center;
+  padding: 6rem 0;
+}
+
+.logo-grid {
+  display: flex !important;
+  justify-content: center;
+  gap: 6rem;
+  flex-wrap: wrap;
+}
+
+.logo-grid img {
+  height: 80px;
+  width: 80px;
+  opacity: 0.8;
+}
+
+/* ---------- Projects grid & project-overview sanity ---------- */
+.project-overview {
+  padding: 8rem 4rem !important;
+  background-color: #000 !important;
+  color: #D8DDD7 !important;
+}
+
+.project-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr 1.2fr;
+  gap: 4rem;
+  align-items: baseline;
+}
+
+/* tags */
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tags span {
+  border: 1px solid #D8DDD7;
+  border-radius: 20px;
+  padding: 0.3rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* ---------- Contact box restore ---------- */
+.contact {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+  background-color: #0b0b0b;
+  color: #d8ddd7;
+}
+
+.contact-box {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 30px;
+}
+
+/* ---------- Force hero overlay, text color, and button visuals ---------- */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+
+.hero p,
+.hero h1,
+.hero-content h1 {
+  color: #D8DDD7 !important;
+}
+
+/* ---------- Mobile sanity overrides (ensure mobile stack works) ---------- */
+@media (max-width: 900px) {
+  .about-intro .container,
+  .about-story .container {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 2rem !important;
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+
+  .project-overview .project-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1.5rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  /* restore hero parallax disabled on mobile */
+  .hero.parallax {
+    background-attachment: scroll !important;
+  }
+
+  .logo-grid img {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .logos {
+    padding: 3rem 0 !important;
+  }
+}
+
+/* ---------- minor final safety resets ---------- */
+footer, .about-intro, .about-story, .project-overview, .contact {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
