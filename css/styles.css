@@ -1466,7 +1466,7 @@ MOBILE RESPONSIVE
     /* Nav */
 
    .navbar {
-    padding: 0.6rem 1rem;
+    padding: 1rem;
     flex-direction: column;       /* stack vertically */
     align-items: center;          /* center everything */
     gap: 0.8rem;                  /* some breathing space */
@@ -1505,6 +1505,7 @@ MOBILE RESPONSIVE
   .hero {
     min-height: 70vh;
     background-attachment: scroll; /* disables parallax on mobile for smooth scroll */
+  padding: 5rem 2rem;
   }
 
   .hero h1 {
@@ -1525,8 +1526,8 @@ MOBILE RESPONSIVE
   .storytelling {
     height: auto !important;        /* let normal document flow determine height */
     overflow: visible;
-    padding: 2rem 0;
-
+    align-items: center;
+    padding:5rem 0 1rem 0;
   }
 
   .scroll-container {
@@ -1543,7 +1544,7 @@ MOBILE RESPONSIVE
   .project {
     display: block !important;
     width: 90%;
-    margin: 2rem ;
+    margin: 1rem ;
     padding: 0;
     opacity: 1 !important;
     transform: none !important;
@@ -1555,26 +1556,28 @@ MOBILE RESPONSIVE
     height: auto;
     border-radius: 10px;
     margin: 2rem;;
+  }
 
+
+  .spacer{
+    display: none;
   }
 
     .project-hero h1 {
     font-size: 2.2rem;
   }
 
-  .project-description {
+    .project-description {
     padding: 1rem 0;
   }
 
   .project-tags {
-
 display: none;
  }
 
+
+
 /* More Project Gallery */
-
-
-
 
   .projects-grid {
     grid-template-columns: 1fr; /* stack vertically */
@@ -1595,6 +1598,57 @@ display: none;
     margin-bottom: 2rem;
   }
 
+
+/*  Project Page */
+
+
+.project-overview{
+padding:10rem 2rem 2rem 2rem;
+}
+
+  .img-wrapper{
+        padding: 0 0 2rem 0;
+  }
+
+  .about-video{
+
+            padding: 2rem 0;
+
+  }
+
+.more-projects{
+        padding: 5rem 1rem;
+}
+
+.project-thumb{
+  padding:0 1rem 2rem 1rem;
+}
+
+
+/* About Page */
+
+.about-intro{
+  padding:2rem 1rem ;
+}
+.portrait{
+ padding-top: 4rem;
+}
+
+.about-video{
+
+  padding: 2rem  1rem 0 1rem;
+}
+
+.about-story{
+  padding: 0 1rem 10rem 1rem;
+}
+
+
+
+.contact{
+
+  padding:7rem 1rem;
+}
 
 
 /* Hide heavy parallax on small devices (improves performance) */
@@ -1617,6 +1671,24 @@ display: none;
     font-size: 0.95rem;
     text-align: center;
   }
+
+
+  /* Quote */
+.about-quote blockquote::before {
+  top: 1rem;
+  left: -1rem;
+}
+
+.about-quote blockquote::after {
+  content: "”";
+  bottom: 1rem;
+  right: -1rem;
+}
+
+.about-quote blockquote::before,
+.about-quote blockquote::after {
+  font-size: 3rem;
+}
 
   /* Logos */
   .logos {
