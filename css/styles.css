@@ -568,7 +568,7 @@ footer a:hover {
   max-width: 80%;
 }
 
-.social-grid {
+/*.social-grid {
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -580,6 +580,27 @@ footer a:hover {
   height: 40px;
   opacity: 0.8;
    margin: 0 1rem;
+} */
+
+
+.social-icons {
+  display: flex;
+justify-content: center;
+  gap: 40px;
+  padding-bottom: 10px;
+}
+
+.social-icons a {
+  font-size: 1.5rem; 
+  transition: transform 0.2s ease;
+    color: #D8DDD7;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* optional hover effect */
+  color: #fff6d0;
+
 }
 
 
